@@ -1,4 +1,5 @@
-# Basic-templete
+# Basic-template
+
 ```
 A BASIC SASS TEMPLATE FOR A QUICK STARTUP
 
