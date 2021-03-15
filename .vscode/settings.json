@@ -1,0 +1,7 @@
+{
+    "editor.wordWrapColumn": 100,
+    "html.format.wrapLineLength": 0,
+"diffEditor.wordWrap": "off",
+"editor.autoIndent": "none",
+"prettier.printWidth": 100
+}

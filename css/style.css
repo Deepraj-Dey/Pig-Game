@@ -1,3 +1,9 @@
+:root {
+  --linear-gradient-1: #4568dc;
+  --linear-gradient-2: #b06ab3;
+  --primary-color: #182c61;
+  --secondary-color: #82589f; }
+
 *,
 *::after,
 *::before {
@@ -9,8 +15,208 @@ html {
   font-size: 62.5%;
   font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box; }
+  @media only screen and (max-width: 64em) {
+    html {
+      font-size: 50%; } }
 
 body {
   line-height: 1.6;
   font-weight: 400;
-  color: #000; }
+  color: #000;
+  background-image: linear-gradient(to right, var(--linear-gradient-1), var(--linear-gradient-2));
+  min-height: 100vh;
+  background-repeat: no-repeat; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative; }
+  @media only screen and (max-width: 64em) {
+    .container {
+      align-items: flex-start;
+      margin-top: 3rem; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      margin-top: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      flex-direction: column; } }
+
+.player-active {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.5s; }
+
+.player-not-active {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.5s; }
+
+.player-winner {
+  background-color: var(--primary-color); }
+  .player-winner > .heading-1 {
+    color: #fff; }
+  .player-winner > .winner-score {
+    color: #fff; }
+
+.player-1, .player-2 {
+  height: 64rem;
+  width: 50rem;
+  color: var(--primary-color); }
+  @media only screen and (max-width: 50em) {
+    .player-1, .player-2 {
+      height: 100vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .player-1, .player-2 {
+      height: 50vh;
+      width: 100vw; } }
+
+.player-1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+  @media only screen and (max-width: 37.5em) {
+    .player-1 {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding-top: 5rem; } }
+
+.player-2 {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+  @media only screen and (max-width: 37.5em) {
+    .player-2 {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      padding-top: 5rem; } }
+
+.heading-1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-1 {
+      font-size: 3.9rem; } }
+
+.main-score-1, .main-score-2 {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: bold;
+  color: var(--primary-color); }
+
+.hidden {
+  display: none; }
+
+.dice {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12rem;
+  background-color: rgba(255, 255, 255, 0.7); }
+  @media only screen and (max-width: 64em) {
+    .dice {
+      top: 20rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .dice {
+      top: 46%;
+      width: 7rem; } }
+  @media only screen and (max-width: 20em) {
+    .dice {
+      width: 6rem; } }
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 17rem;
+  padding: 2rem 0rem;
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+  font-size: 1.9rem; }
+  @media only screen and (max-width: 37.5em) {
+    .btn {
+      width: 15rem;
+      padding: 1rem 2rem; } }
+  @media only screen and (max-width: 20em) {
+    .btn {
+      width: 12rem; } }
+
+.new-game {
+  top: 20%; }
+  @media only screen and (max-width: 64em) {
+    .new-game {
+      top: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .new-game {
+      left: 50%;
+      top: 2%;
+      width: 15rem; } }
+
+.roll-dice {
+  top: 60%; }
+  @media only screen and (max-width: 64em) {
+    .roll-dice {
+      top: 42rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .roll-dice {
+      left: 19%;
+      top: 48%; } }
+  @media only screen and (max-width: 20em) {
+    .roll-dice {
+      top: 47%; } }
+
+.hold {
+  top: 70%; }
+  @media only screen and (max-width: 64em) {
+    .hold {
+      top: 52rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .hold {
+      top: 48%;
+      left: 81%; } }
+  @media only screen and (max-width: 20em) {
+    .hold {
+      top: 47%; } }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  min-height: 40rem; }
+  @media only screen and (max-width: 37.5em) {
+    .grid-container {
+      min-height: 0; } }
+
+.current-score-box {
+  height: 15rem;
+  width: 20rem;
+  background-color: var(--linear-gradient-1);
+  border-radius: 10px;
+  color: #fff;
+  grid-row: 2/4;
+  grid-column: 2/3;
+  align-self: center;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5); }
+  @media only screen and (max-width: 37.5em) {
+    .current-score-box {
+      height: auto;
+      width: 20rem;
+      display: flex;
+      justify-self: center;
+      justify-content: space-evenly;
+      margin-top: -2rem;
+      align-items: center;
+      padding-bottom: 0.5rem; } }
+  @media only screen and (max-width: 20em) {
+    .current-score-box {
+      margin-top: -4rem; } }
+
+.heading-3 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  margin-top: 1.75rem; }

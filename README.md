@@ -1,6 +1,6 @@
-# Basic-template
+# A PIG DICE GAME
 
 ```
-A BASIC SASS TEMPLATE FOR A QUICK STARTUP
+A Responsive pig dice game made with HTML Sass and Javascript
 
 ```

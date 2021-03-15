@@ -8,7 +8,35 @@
       content="width=device-width, initial-scale=1.0"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>template</title>
+    <title>Pig Dice Game</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="player-1 player-active">
+        <h1 class="heading-1 player-1-heading">PLAYER 1</h1>
+        <div class="main-score-1">0</div>
+        <div class="grid-container">
+          <div class="current-score-box">
+            <h3 class="heading-3">Current</h3>
+            <h3 class="heading-3 current-score-1">0</h3>
+          </div>
+        </div>
+      </div>
+      <div class="player-2 player-not-active">
+        <h1 class="heading-1 player-2-heading">PLAYER 2</h1>
+        <div class="main-score-2">0</div>
+        <div class="grid-container">
+          <div class="current-score-box">
+            <h3 class="heading-3">Current</h3>
+            <h3 class="heading-3 current-score-2">0</h3>
+          </div>
+        </div>
+      </div>
+      <button class="btn new-game">New Game</button>
+      <button class="btn roll-dice">Roll Dice</button>
+      <button class="btn hold">Hold</button>
+      <img src="./img/dice-6.png" alt="dice" class="dice" />
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
